@@ -1,0 +1,19 @@
+@media (min-width: 992px){
+.col-lg-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+}
+}
+.line[_ngcontent-xbv-c6] {
+  height: 4px;
+  width: 80px;
+}
+.layer__[_ngcontent-xbv-c19] {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  cursor: pointer;
+  transition: .6s opacity;
+}
+.layer__[_ngcontent-xbv-c19]:hover {
+  opacity: 1;
+}

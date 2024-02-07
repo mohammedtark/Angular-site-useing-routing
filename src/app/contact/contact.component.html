@@ -1,0 +1,24 @@
+<div _ngcontent-aed-c16 class="mb-4">
+  <div _ngcontent-aed-c16 class="pt-3 conatiner">
+
+    <div _ngcontent-aed-c6 class="text-center pt-4" style="color: rgb(44, 62, 80);">
+      <h2 _ngcontent-aed-c6 class="text-uppercase mb-3 fs-1 fw-bolder">conatct section</h2>
+      <div _ngcontent-aed-c6 class="d-flex align-items-center justify-content-center mb-3">
+        <div _ngcontent-aed-c6 class="line me-3" style="background-color: rgb(44, 62, 80);"></div>
+        <i _ngcontent-aed-c6 class="fa-solid fa-star"></i>
+        <div _ngcontent-aed-c6 class="line ms-3" style="background-color: rgb(44, 62, 80);"></div>
+      </div>
+    </div>
+    <form _ngcontent-aed-c16 novalidate action class="w-50 p-3 mx-auto mt-5 ng-valid ng-dirty ng-touched">
+      <label _ngcontent-aed-c16 *ngIf="userNameLabel" for="userName" class="position-relative top-0 __top ">userName : </label>
+      <input _ngcontent-aed-c16 (input)="onInputChange($event, 'userNameLabel')" id="userName" type="text" placeholder="userName" name="userName" class="form-control border-0 border-bottom py-3 position-relative">
+      <label _ngcontent-aed-c16 *ngIf="userAgeLabel" for="userAge" class="position-relative top-0 __top">userAge : </label>
+      <input _ngcontent-aed-c16 (input)="onInputChange($event, 'userAgeLabel')" id="userAge" type="number" placeholder="userAge" name="userAge" class="form-control border-0 border-bottom py-3 position-relative">
+      <label _ngcontent-aed-c16 *ngIf="userEmailLabel" for="userEmail" class="position-relative top-0 __top">userEmail : </label>
+      <input _ngcontent-aed-c16 (input)="onInputChange($event, 'userEmailLabel')" id="userEmail" type="email" placeholder="userEmail" name="userEmail" class="form-control border-0 border-bottom py-3 position-relative">
+      <label _ngcontent-aed-c16 *ngIf="userPasswordLabel" for="userPassword" class="position-relative top-0 __top">userPassword : </label>
+      <input _ngcontent-aed-c16 (input)="onInputChange($event, 'userPasswordLabel')" id="userPassword" type="password" placeholder="userPassword" name="userPassword" class="form-control border-0 border-bottom py-3 position-relative">
+      <button _ngcontent-aed-c16 class="btn mt-4 text-white" style="background-color: #1abc9c;"> send Message </button>
+    </form>
+  </div>
+</div>
