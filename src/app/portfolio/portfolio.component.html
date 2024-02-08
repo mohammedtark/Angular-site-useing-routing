@@ -8,51 +8,15 @@
         <div _ngcontent-xbv-c6 class="line ms-3" style="background-color: rgb(44, 62, 80);"></div>
       </div>
     </div>
+   
+
+
     <div _ngcontent-xbv-c19 class="container">
       <div _ngcontent-xbv-c19 class="row g-5">
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/poert1.png">
-            <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
-              <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
-            </div>
-          </div>
-        </div>
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/port2.png">
-            <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
-              <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
-            </div>
-          </div>
-        </div>
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/port3.png">
-            <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
-              <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
-            </div>
-          </div>
-        </div>
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/poert1.png">
-            <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
-              <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
-            </div>
-          </div>
-        </div>
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/port2.png">
-            <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
-              <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
-            </div>
-          </div>
-        </div>
-        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6">
-          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative">
-            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" src="./assets/port3.png">
+        <!-- ... إضافة الصور هنا ... -->
+        <div _ngcontent-xbv-c19 class="col-lg-4 col-md-6" *ngFor="let imageSrc of imageSources">
+          <div _ngcontent-xbv-c19 class="rounded-3 overflow-hidden position-relative" (click)="toggleOverlay(imageSrc)">
+            <img _ngcontent-xbv-c19 alt class="w-100 rounded-3" [src]="imageSrc">
             <div _ngcontent-xbv-c19 class="layer__ position-absolute start-0 w-100 top-0 h-100 d-flex justify-content-center align-items-center">
               <i _ngcontent-xbv-c19 class="text-white fa-solid fa-plus fa-6x"></i>
             </div>
@@ -60,6 +24,10 @@
         </div>
       </div>
     </div>
-    
+
+    <div _ngcontent-xra-c19 class="model__ position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center" *ngIf="showOverlay" (click)="closeOverlay()">
+      <img _ngcontent-xra-c19 alt [src]="selectedImageSrc" style="width: 600px;">
+    </div>
+
   </div>
 </div>
